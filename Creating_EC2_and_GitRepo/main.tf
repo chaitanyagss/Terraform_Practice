@@ -1,6 +1,6 @@
 #create ec2 instances
 resource "aws_instance" "instance1" {
-  ami           = "ami-066784287e358dad1"
+  ami           = var.os
   instance_type = "t2.micro"
   provider = aws.east
 
@@ -33,3 +33,4 @@ resource "github_repository" "repo2" {
 
   visibility = "private"
 }
+
